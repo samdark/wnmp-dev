@@ -1,0 +1,18 @@
+server {
+	listen       80;
+	server_name  yii2-basic.local;
+	root	c:/dev/yii2/apps/basic/web/;
+
+	location / {
+		try_files   $uri $uri/ /index.php?$args; # Redirect everything that isn't real file to index.php including arguments.
+	}
+
+	location ~ \.php$ {
+		include fastcgi.conf;
+		fastcgi_pass   127.0.0.1:9000;
+	}
+
+	location ~ /\.(ht|svn) {
+		deny all;
+	}
+}
