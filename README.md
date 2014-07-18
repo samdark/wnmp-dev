@@ -24,5 +24,5 @@ new directories for these and then you'll be able to run `restart php-directory`
 Known issues
 ------------
 
-- php-cgi can handle a single request at a time. Since running multiple php-cgi results in frequent caching and impossibility to debug with
-  XDebug we're sticking with a single php-cgi instance. If you need performant solution under Windows consider switching to Apache or IIS.
+- php-cgi can handle a single request at a time. Since running multiple php-cgi results in frequent crashing and impossibility to debug with
+  XDebug we're sticking to a single php-cgi instance. If you need better performance using Windows consider switching to Apache or IIS.
