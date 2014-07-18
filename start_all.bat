@@ -1,7 +1,9 @@
-start "PHP 5.5 FastCGI" /B "php55\php-cgi.exe" -b localhost:9000
+@call restart_php php55
 
 @pushd nginx
-start "nginx" /B "nginx.exe"
+@start "nginx" /B "nginx.exe"
 @popd
+@echo Started nginx.
 
-start "MariaDB" /B "mariadb\bin\mysqld.exe" "--defaults-file=mariadb\data\my.ini"
+@start "MariaDB" /B "mariadb\bin\mysqld.exe" "--defaults-file=mariadb\data\my.ini"
+@echo Started MariaDB.

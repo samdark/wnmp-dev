@@ -1,7 +1,8 @@
-@taskkill /im php-cgi.exe /F
+@echo Killing php-cgi.
+@taskkill /im php-cgi.exe /F > NUL
 
-@pushd nginx
-start "Stopping nginx" /B nginx -s stop
-@popd
+@echo Killing nginx.
+@taskkill /im nginx.exe /F > NUL
 
-start "Stopping MariaDB" mariadb\bin\mysqladmin -u root -p shutdown
+@echo Stopping MariaDB.
+@mariadb\bin\mysqladmin -u root shutdown

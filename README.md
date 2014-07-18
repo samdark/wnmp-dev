@@ -18,5 +18,11 @@ Installation
 Switching PHP versions
 ----------------------
 
-By default it starts PHP 5.5 but it's possible to switch versions without restarting the server by running
-`restart_php_54.bat`. If you need more PHP versions you can copy the file and adjust it.
+By default it starts PHP 5.5 but it's possible to switch versions by running `restart_php php54`. If you need more PHP versions create
+new directories for these and then you'll be able to run `restart php-directory`.
+
+Known issues
+------------
+
+- php-cgi can handle a single request at a time. Since running multiple php-cgi results in frequent caching and impossibility to debug with
+  XDebug we're sticking with a single php-cgi instance. If you need performant solution under Windows consider switching to Apache or IIS.
