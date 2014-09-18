@@ -12,7 +12,7 @@ Installation
 4. Download [MariaDB](https://downloads.mariadb.org/) or [MySQL](https://dev.mysql.com/downloads/windows/installer/), put it to `mariadb`.
 5. Copy `nginx/conf/vhosts/example._conf` to `nginx/conf/vhosts/mysite.conf`, edit it to point to your webroot.
 6. Add domain chosen to your hosts file.
-7. Run `start_all.bat`
+7. Run `start_all.bat`.
 8. Enjoy.
 
 Switching PHP versions
