@@ -1,6 +1,7 @@
 @IF [%1] == [] GOTO usage
 
 @taskkill /im php-cgi.exe /F > NUL
+@set PHP_FCGI_MAX_REQUESTS=0
 @start "PHP %1 FastCGI" /B "%1\php-cgi.exe" -b localhost:9000
 @echo Started PHP %1 FastCGI on port 9000.
 
