@@ -10,6 +10,7 @@ server {
 	location ~ \.php$ {
 		include fastcgi.conf;
 		fastcgi_pass   127.0.0.1:9000;
+		try_files $uri =404;
 	}
 
 	location ~ /\.(ht|svn) {
