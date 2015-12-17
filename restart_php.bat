@@ -21,7 +21,7 @@ taskkill /im php-cgi.exe /F > NUL 2>&1
 @rem set PHP_FCGI_MAX_REQUESTS=0
 @rem start "PHP %1 FastCGI" /B "%1\php-cgi.exe" -b localhost:%cgi_port%
 
-start "PHP %1 FastCGI Spawner" /B "php-cgi-spawner.exe" %1/php-cgi.exe %cgi_port% %cgi_instances%
+start "PHP %1 FastCGI Spawner" /B "php-cgi-spawner.exe" %1/php-cgi.exe %cgi_port% %cgi_instances% 1000
 
 echo Started %cgi_instances% PHP %1 FastCGI on port %cgi_port%.
 
