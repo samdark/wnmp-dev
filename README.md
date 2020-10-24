@@ -28,3 +28,4 @@ Credits
 -------
 
 - PHP CGI spawner (`php-cgi-spawner.exe`): https://github.com/deemru/php-cgi-spawner
+- Nginx: https://nginx.org/

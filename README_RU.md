@@ -27,3 +27,4 @@ wnmp-dev — среда окружения под Windows, содержащая 
 ----------------------
 
 - PHP CGI spawner (`php-cgi-spawner.exe`): https://github.com/deemru/php-cgi-spawner
+- Nginx: https://nginx.org/
